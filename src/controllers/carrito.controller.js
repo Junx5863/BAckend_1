@@ -220,7 +220,6 @@ export const carritoController = {
   updateProductQuantity,
   emptyProductFromCarrito,
   deleteProductFromCarrito,
-
   createCarritoPost,
   getCarById,
 };

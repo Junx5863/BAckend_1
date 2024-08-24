@@ -325,7 +325,48 @@
  *                                      type: string
  *                                      example: Video game deleted
  *  
- *  
+ *  /api/v1/create_carrito:
+ *       post:
+ *         tags:
+ *           - Carrito
+ *         summary: Crear Carrito
+ *         requestBody:
+ *           required: true
+ *           content:
+ *             application/json:
+ *               schema:
+ *                 type: object
+ *                 properties:
+ *                   code_carrito:
+ *                     type: string
+ *                     example: Carrito 1     
+ *                   productos:
+ *                     type: Array
+ *                     example: []
+ *         responses:
+ *           201:
+ *             description: Carrito Creado Correctamente
+ *             content:
+ *               application/json:
+ *                schema:
+ *                    type: object
+ *                    properties:
+ *                       code_carrito:
+ *                            type: string
+ *                            example: Carrito 1     
+ *                       productos:
+ *                            type: Array
+ *                            example: []
+ *           400:
+ *             description: Error al crear el carrito
+ *             content:
+ *               application/json:
+ *                 schema:
+ *                   type: object
+ *                   properties:
+ *                     error:
+ *                       type: string
+ *                       example: Error al encontrar el carrito
  *           
  *  
  *  /api/v1/carrito/{id}:
